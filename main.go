@@ -9,7 +9,7 @@ import (
 func main() {
 	engin := gin.Default()
 	engin.GET("/", func(c *gin.Context) {
-		c.Status(http.StatusOK)
+		c.JSON(http.StatusOK, gin.H{"key": "value"})
 	})
 	engin.Run(":8888")
 }
